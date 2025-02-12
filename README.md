@@ -1,4 +1,4 @@
-# DT - Device Tweaker
+# ExtendeD DT - Device Tweaker
 
 <div align="center"><img src="DT-banner.jpg">
   
@@ -6,11 +6,10 @@
 
 **Working on all devices**
 
-# ⚠️ Module Archived, So don't ask me about it anymore.
-
+# ⚠️ This is not an officially supported MRX7014 project.
 <br />
 
-# V3.0.0 - Stable Released
+# V.E.1.0.0 - Stable Released
 
 </div>
 
@@ -28,9 +27,8 @@
 - Kernel Tweaks For Better Battery Usage 
 - Zram Setting
 - Stop Send Logs
+- Disable Debug Environment
+- Disable OfflineLog 
 
 ### Usage:
 - Install it as a normal module via Magisk, KSU, or APatch
-
-### Credits:
-<a href="https://t.me/mrx7014cloud">**MRX7014 Cloud**</a>
