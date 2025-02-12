@@ -7,7 +7,6 @@
 **Working on all devices**
 
 # ⚠️ This is not an officially supported MRX7014 project.
-<br />
 
 # V.E.1.0.0 - Stable Released
 
