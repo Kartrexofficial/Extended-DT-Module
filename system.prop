@@ -1,7 +1,8 @@
-###DT - Device Tweaker
-#V3.0.0
-###By: MRX7014
+##Extended DT - Device Tweaker
+#V1.0.0 ExtenDed
+###By: MRX7014 & KARTREXOFFICIAL
 #build.prop tweaks
+
 # Faster boot time
 ro.config.hw_power_saving=1
 ro.config.hw_fast_dormancy=1
@@ -10,6 +11,7 @@ persist.sys.use_dithering=0
 ro.mot.eri.losalert.delay=1000
 ro.ril.sensor.sleep.control=1
 ro.config.hw_quickpoweron=true
+
 # Better Responsiveness & Speed
 touch.pressure.scale=0.001 
 persist.sys.ui.hw=1 
@@ -28,13 +30,16 @@ MultitouchSettleInterval=1ms
 MultitouchMinDistance=1px 
 TapInterval=1ms 
 TapSlop=1px
+
 # FPS Stabilizer
 debug.sf.showupdates=0
 debug.sf.showcpu=0
 debug.sf.showbackground=0
 debug.sf.showfps=0
+
 #Disables sending of usage data
 ro.config.nocheckin=1
+
 # Save Battery Without Performance Drop
 pm.sleep_mode=1
 ro.ril.disable.power.collapse=0
@@ -46,8 +51,10 @@ persist.sys.use_dithering=0
 ro.mot.eri.losalert.delay=1000
 ro.ril.sensor.sleep.control=1
 ro.ril.power_collapse=1
+
 # Change Default Rendering Driver To Vulkan
 debug.hwui.renderer=vulkan
+
 # Better RAM Management
 ro.HOME_APP_ADJ=15
 ro.FOREGROUND_APP_ADJ=0
@@ -56,10 +63,143 @@ ro.HIDDEN_APP_MIN_ADJ=7
 dalvik.vm.dexopt-flags=m=y,v=n,o=v,u=n
 dalvik.vm.heapgrowthlimit=128m
 dalvik.vm.heapsize=256m
+
 # Disable Android logger – log-cat
 logcat.live=disable
+
 #Smooth UI
 persist.service.lgospd.enable=0
 persist.service.pcsync.enable=0
 ro.ril.enable.a52=1
 ro.ril.enable.a53=0
+
+# wpa_supplicant logging
+persist.wpa_supplicant.debug=false
+
+#Enable stm events
+persist.debug.coresight.config=
+
+
+# GPU profiling tools
+graphics.gpu.profiler.support=false
+
+# Logd
+persist.logd.limit=Off
+persist.logd.size=-1
+persist.logd.size.crash=Off
+persist.logd.size.main=-1
+persist.logd.size.radio=Off
+persist.logd.size.system=Off
+ro.logd.size=-1
+ro.logd.size.stats=-1
+persist.logd.diag.newlocation=0
+
+# HardwareRenderer
+debug.hwui.disable_vsync=true
+debug.hwui.profile=false
+debug.hwui.render_dirty_regions=false
+debug.hwui.show_dirty_regions=false
+debug.hwui.show_non_rect_clip=hide
+
+# WindowOrientationListener
+debug.orientation.log=false
+
+# SQLiteGlobal
+debug.sqlite.journalmode=OFF
+debug.sqlite.wal.syncmode=off
+debug.sqlite.syncmode=off
+debug.sqlite.wal.poolsize=8
+
+#property to enable user to access Google WFD settings
+persist.debug.wfd.enable=0
+
+# Disable Debug Environment
+ro.debuggable=0
+ro.force.debuggable=0
+
+#Wi-Fi Round Trip Time
+config.disable_rtt=true
+
+#frame rendering
+debug.sf.disable_backpressure=0
+debug.sf.enable_gl_backpressure=1
+
+# vendor/etc/init/hw/init.qcom.rc
+persist.debug.trace=0
+persist.logd.diag.tcpdump=false
+persist.logd.diag.bootup=false
+persist.logd.diag.mobilelog=false
+persist.sys.qlogd=0
+
+# init.qti.kernel.rc
+persist.sys.ssr.enable_debug=false
+persist.vendor.sys.rawdump_copy=0
+
+# histograms for system metrics and usage statistics
+ro.vendor.histogram.enable=false
+vendor.display.disable_sdr_histogram=1
+
+#LMK
+sys.lmk.reportkills=0
+
+# Enable `scout related debugging functions and perform data dump through the socket interface. It is usually used by developers to collect and analyze data in specific scenarios. 
+persist.sys.scout_dumpbysocket=false
+
+# Disable  Tracing
+debug.hwui.skia_atrace_enabled=false
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
+
+debug.atrace.tags.enableflags=0
+
+# some logs
+debug.mdpcomp.logs=0
+persist.vendor.radio.adb_log_on=0
+persist.traced.enable=0
+persist.vendor.camera.mawlog.main=0
+persist.vendor.camera.mawlog.aiasd=0
+
+# sensor event to onetrack
+persist.vendor.sensor.onetrack=false
+
+# Disable Gralloc logs
+vendor.gralloc.enable_logs=0
+
+# Disable Sensor HAL Trigger
+persist.vendor.sensors.debug.hal_trigger_crash=false
+persist.vendor.sensors.debug.hal_trigger_ssr=false
+
+# Ramdump
+persist.vendor.ssr.enable_ramdumps=0
+ro.vendor.displayfeature.dump=false
+vendor.display.disable_hw_recovery_dump=1
+
+# OfflineLog
+persist.sys.offlinelog=false
+persist.sys.offlinelog.bootlog=false
+persist.sys.offlinelog.kernel=false
+persist.sys.offlinelog.logcat=false
+service.offlinelog.bootloader=false
+
+# Camera Log
+persist.vendor.camera.logstate=0
+
+# Out Of Memory Watchdog
+persist.sys.oom_crash_on_watchdog=false
+
+#Log Tags
+log.tag.stats_log=S
+persist.log.tag=S
+persist.log.tag.snet_event_log=S
+persist.log.tag.misight=S
+
+#Bluetooth logger
+vendor.bluetooth.startbtlogger=false
+bluetooth.startbtlogger=false
+
+# AppCompact
+persist.sys.use_boot_compact=false
+
+
+
+ 
